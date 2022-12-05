@@ -3,40 +3,86 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Touch & View | About</title>
+<head id="Head1" runat="server">
+    <title>Online Exam Management System | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <%
-        string path = HttpContext.Current.Server.MapPath("Link.txt");
-        string content = System.IO.File.ReadAllText(path);
-        Response.Write(content);
-    %>
-    <link href="CSS/About.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Header.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Footer.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Loader.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Responsive.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Default.css" rel="stylesheet" type="text/css" />
+    <link href="Global/Fontawesome-free-6.0.0-beta2-web/css/all.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <form id="about" runat="server">
-        <%
-            string headerpath = HttpContext.Current.Server.MapPath("Html/Header.htm");
-            string headercontent = System.IO.File.ReadAllText(headerpath);
-            Response.Write(headercontent);
-        %>
-
+<body class="body">
+    <form id="default" runat="server">
+        <div id="logo" runat="server">Advance Exam Management System</div>
+        <div id="header" runat="server">
+            <div id="menu">
+                <ul>
+                    <li><a class="a" href="../Default.aspx"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a class="a" href="About.aspx"><i class="fas fa-info-circle"></i>Dashboard</a></li>
+                    
+                    <li><a class="btnLogin" href="#"><i class="fas fa-user-plus"></i>HOD Login</a></li>
+                    <li><a class="btnLogin" href="../User/Login.aspx"><i class="fas fa-sign-in-alt"></i>Candidate Login</a></li>
+                </ul>
+            </div>
+        </div>
+    
         <div class="maincontent">
-            ABOUT<br />
-            What is Lorem Ipsum?
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            Why do we use it?
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            Where does it come from?
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+           
+            
+
+
         </div>
 
-        <%
-            string footerpath = HttpContext.Current.Server.MapPath("Html/Footer.htm");
-            string footercontent = System.IO.File.ReadAllText(footerpath);
-            Response.Write(footercontent);
-        %>
+        <div id="footer">
+            <div class="info">
+                <div id="companyname" class="banner" runat="server">Online Exam Management system</div>
+                <p id="companydesc" runat="server">
+                    Raja Bazar Main Rd.
+            <br />
+                    Midnapore, Paschim Midnapore,
+            <br />
+                    721212, West Bengal
+                </p>
+                <div class="contact">
+                    <div class="mobile">
+                        <i class="fas fa-phone"></i>
+                        <asp:Label ID="mobile" runat="server">0322282530</asp:Label>
+                    </div>
+                    <div class="email">
+                        <i class="far fa-envelope"></i>
+                        <asp:Label ID="email" runat="server">helpdesk@gmail.com</asp:Label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links">
+                <div>
+                    <p>Important links</p>
+                </div>
+                <div class="a"><a href="../Admin/Login.aspx"><i class="fas fa-sign-in-alt"></i>Admin Login</a></div>
+                <div class="a"><a href="About.aspx"><i class="fas fa-info-circle"></i>About</a></div>
+                <div class="a"><a href="Contact.aspx"><i class="fas fa-link"></i>Contact</a></div>
+                <div class="a"><a href="#"><i class="far fa-question-circle"></i>FAQ</a></div>
+                <div class="a"><a href="#"><i class="fas fa-tasks"></i>Privacy Policy</a></div>
+                <div class="a"><a href="#"><i class="fas fa-tasks"></i>Terms and conditions</a></div>
+            </div>
+
+            
+            
+
+            
+
+          
+          <center>
+            <div class="copyright">
+                © Copyright <span id="year" runat="server">2022</span> <span id="cName" runat="server">Exam Management &amp; Application</span> Pvt. Ltd.
+                <br />
+                All Rights Reserved.
+            </div>
+            </center>
+        </div>
     </form>
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Touch & View | Account Details</title>
+    <title>Candidate Panel | Account Details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="CSS/Account.css" rel="stylesheet" type="text/css" />
     <%
@@ -107,15 +107,15 @@
                                     <div class="list" id="listStatus" runat="server">
                                         <i class="fas fa-trophy"></i>
                                         <label id="tagStatus" class="tag" runat="server">Inactive</label>
-                                        <p>Package</p>
-                                        <asp:Label ID="lblPackage" class="txt" runat="server" Text="N/A"></asp:Label>
-                                        <asp:Label ID="lblBoost" class="link" runat="server" Text="Not Boosted"></asp:Label>
+                                        <p>Authentication Status</p>
+                                        
+                                        <asp:Label ID="lblBoost" class="link" runat="server" Text="Current Student"></asp:Label>
                                     </div>
 
                                     <div class="list refer" id="listReferrer" runat="server">
                                         <i class="fas fa-arrow-circle-up"></i>
                                         <label id="tagReferrerId" class="tag" runat="server">N/A</label>
-                                        <p>Referrer Details</p>
+                                        <p>Activation Details</p>
                                         <asp:Label ID="lblReferrerName" class="txt" runat="server" Text="N/A"></asp:Label>
                                         <asp:LinkButton ID="linkContact" class="link" runat="server" OnClick="linkContact_Click">Contact</asp:LinkButton>
                                     </div>
@@ -134,10 +134,10 @@
                                 <div class="row">
                                     <div class="list" id="listEmail" runat="server">
                                         <i class="fas fa-envelope"></i>
-                                        <label id="tagEmail" class="tag" runat="server">Not Verified</label>
+                                        <label id="tagEmail" class="tag" runat="server"> Verified</label>
                                         <p>Email ID</p>
                                         <asp:Label ID="lblEmail" class="txt" runat="server" Text="N/A"></asp:Label>
-                                        <asp:LinkButton ID="linkEmail" class="link" runat="server" OnClick="linkEmail_Click">Verify</asp:LinkButton>
+                                        <asp:LinkButton ID="linkEmail" class="link" runat="server" >Verify</asp:LinkButton>
                                     </div>
 
                                     <div class="list" id="listMobile" runat="server">
@@ -145,14 +145,14 @@
                                         <label id="tagMobile" class="tag" runat="server">Not Verified</label>
                                         <p>Mobile</p>
                                         <asp:Label ID="lblMobile" class="txt" runat="server" Text="N/A"></asp:Label>
-                                        <asp:LinkButton ID="linkMobile" class="link" runat="server" OnClick="linkMobile_Click">Verify</asp:LinkButton>
+                                        <asp:LinkButton ID="linkMobile" class="link" runat="server" >Verify</asp:LinkButton>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="list" id="listKyc" runat="server">
                                         <i class="fas fa-passport"></i>
-                                        <label id="tagKyc" class="tag" runat="server">Not Verified</label>
-                                        <p>KYC Verification</p>
+                                        <label id="tagKyc" class="tag" runat="server"> Verified</label>
+                                        <p>Authentication Verify</p>
                                         <asp:Label ID="lblKyc" class="txt" runat="server" Text="N/A"></asp:Label>
                                         <asp:LinkButton ID="linkKyc" class="link" runat="server" OnClick="linkKyc_Click">Upload</asp:LinkButton>
                                     </div>
@@ -199,21 +199,13 @@
                                     <asp:LinkButton ID="linkAddress" class="link" runat="server" Visible="false" OnClick="linkAddress_Click">Provide Address</asp:LinkButton>
                                 </div>
                                 <hr />
+                               
                                 <div class="row">
-                                    <div>Bank Name</div>
+                                    <div>Class Roll</div>
                                     <div>:</div>
-                                    <span id="lblBankName" runat="server">N/A</span>
+                                    <span id="lblRoll" runat="server">8</span>
                                 </div>
-                                <div class="row">
-                                    <div>Account</div>
-                                    <div>:</div>
-                                    <span id="lblAccountNumber" runat="server">N/A</span>
-                                </div>
-                                <div class="row">
-                                    <div>IFSC Code</div>
-                                    <div>:</div>
-                                    <span id="lblIfscCode" runat="server">N/A</span>
-                                </div>
+                               
                                 <div class="row">
                                     <asp:LinkButton ID="linkBank" class="link" runat="server" Visible="false" OnClick="linkBank_Click">Provide Bank Details</asp:LinkButton>
                                 </div>

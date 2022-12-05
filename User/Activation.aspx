@@ -68,7 +68,7 @@
                                 <label for="txtUserId" class="label-name">
                                     <div class="icon"><i class="fas fa-key"></i></div>
                                     <span class="content-name" id="lblKey" runat="server">Enter User Id</span>
-                                    <asp:Button ID="btnSearch" CssClass="btn" runat="server" Text="Search" OnClick="btnSearch_Click" />
+                                    <asp:Button ID="btnSearch" CssClass="btn" runat="server" Text="Search" />
                                 </label>
                             </div>
 
@@ -106,16 +106,14 @@
                                 </div>
 
                                 <div class="btnContainer">
-                                    <asp:LinkButton ID="btnActivate" CssClass="btn" runat="server" ToolTip="Activate member account"
-                                        OnClientClick="return confirm('Do you want to Peroceed?')" OnClick="btnActivate_Click">
-                                        <i class="fas fa-check-circle"></i>Activate</asp:LinkButton>
+                                    
                                 </div>
                             </asp:Panel>
                         </asp:Panel>
                         <asp:Panel CssClass="tabPanel" ID="panelHistory" Visible="false" runat="server">
                             <div class="intro">
                                 <ul>
-                                    <li>Members activation history.</li>
+                                    <li>Candidate activation history.</li>
                                 </ul>
                             </div>
 

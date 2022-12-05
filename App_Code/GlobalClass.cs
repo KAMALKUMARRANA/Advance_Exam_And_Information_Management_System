@@ -44,56 +44,7 @@ public class GlobalClass
         }
         return dtUserInfo;
     }
-    public static int LoadUserBalance(string userId)
-    {
-        int balance = 0;
-        DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection(cs))
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select Balance from tblUserBalance where UserId = @UserId";
-            cmd.Parameters.AddWithValue("@UserId", userId);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-        }
-        balance = Convert.ToInt32(dt.Rows[0]["Balance"].ToString().Trim());
-        return balance;
-    }
-    public static int LoadUserFund(string userId)
-    {
-        int fund = 0;
-        DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection(cs))
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select Balance from tblFund where UserId = @UserId";
-            cmd.Parameters.AddWithValue("@UserId", userId);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-        }
-        fund = Convert.ToInt32(dt.Rows[0]["Balance"].ToString().Trim());
-        return fund;
-    }
-    public static int LoadCompanyBalance()
-    {
-        int balance = 0;
-        DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection(cs))
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select Balance from tblCompanyBalance";
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-        }
-        balance = Convert.ToInt32(dt.Rows[0]["Balance"].ToString().Trim());
-        return balance;
-    }
+   
     public static DataTable LoadAdmin(string adminId)
     {
         DataTable dtAdmin = new DataTable();
@@ -109,21 +60,7 @@ public class GlobalClass
         }
         return dtAdmin;
     }
-    public static DataTable LoadPackageInfo(string package)
-    {
-        DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection(cs))
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from tblPackage where Package = @Package";
-            cmd.Parameters.AddWithValue("@Package", package);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-        }
-        return dt;
-    }
+   
     public static DataTable LoadEmailService()
     {
         DataTable dt = new DataTable();
@@ -287,73 +224,8 @@ public class GlobalClass
         }
         return team;
     }
-    public static bool CheckBoost(string userId)
-    {
-        bool boost = false;
-        int team = CountActiveTeam(userId);
-        if (team > 0)
-            boost = true;
-        else
-            boost = false;
-        return boost;
-    }
-    public static int DailyIncome(string userId)
-    {
-        DataTable dt = LoadUser(userId);
-        DataTable dtPackage = LoadPackageInfo(dt.Rows[0]["Package"].ToString().Trim());
-        int dailyIncome = Convert.ToInt32(dtPackage.Rows[0]["DailyIncome"].ToString().Trim());
-        return dailyIncome;
-    }
-    public static bool IsTaskPending(string userId)
-    {
-        bool state = false;
-        DataTable dt = new DataTable();
-        using (SqlConnection con = new SqlConnection(cs))
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "select * from tblTask where UserId = @UserId";
-            cmd.Parameters.AddWithValue("@UserId", userId);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-        }
-        DateTime expiryDate = DateTime.Parse(dt.Rows[0]["Expiry"].ToString().Trim());
-        DateTime today = DateTime.Parse(CurrentDateOnly());
-        int span = today.CompareTo(expiryDate);
-        if (span > 0)
-            state = true;
-        else
-            state = false;
-        return state;
-    }
-
-    public static string GenerateActivationTxnNo()
-    {
-        string TxnNo = "ACT";
-        const string alpha = "0123456789";
-        int exist = 1;
-        do
-        {
-            Random ran = new Random();
-            for (int i = 0; i < 7; i++)
-            {
-                int a = ran.Next(10);
-                TxnNo = TxnNo + alpha.ElementAt(a);
-            }
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "select count(TxnNo) from tblActivationHistory where TxnNo = @TxnNo";
-                cmd.Parameters.AddWithValue("@TxnNo", TxnNo);
-                con.Open();
-                exist = Convert.ToInt32(cmd.ExecuteScalar());
-            }
-        }
-        while (exist != 0);
-        return TxnNo;
-    }
+  
+  
     public static string GenerateOTP()
     {
         const String code = "ABCDEFGHIJ0123456789";

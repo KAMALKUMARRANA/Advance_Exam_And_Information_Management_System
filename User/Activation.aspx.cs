@@ -30,7 +30,7 @@ public partial class User_Activation : System.Web.UI.Page
         string id = dt.Rows[0]["UserId"].ToString().Trim();
         lblInfo.Text = name + " - " + id;
     }
-    private void ShowUserFund(string userId)
+    /*private void ShowUserFund(string userId)
     {
         string balance = GlobalClass.LoadUserFund(userId).ToString();
         lblBalance.Text = "Available Fund " + "<i class='fas fa-coins'></i> " + balance;
@@ -81,7 +81,7 @@ public partial class User_Activation : System.Web.UI.Page
             formActivation.Visible = false;
             Alert("Please enter User Id!");
         }
-    }
+    }*/
     private void ShowActivationHistory(string Id)
     {
         DataTable dt = new DataTable();
@@ -125,7 +125,7 @@ public partial class User_Activation : System.Web.UI.Page
                 break;
         }
     }
-    private void VerifyUser(string userId)
+    /*private void VerifyUser(string userId)
     {
         if (!GlobalClass.CheckBoost(userId))
         {
@@ -173,7 +173,7 @@ public partial class User_Activation : System.Web.UI.Page
 
         if (userCookies == null)
             Response.Redirect("Login.aspx?Mode=Redirect&Url=" + Request.Url.AbsoluteUri);
-    }
+    }*/
 
     protected void buttonActivation_Click(object sender, EventArgs e)
     {
@@ -185,10 +185,7 @@ public partial class User_Activation : System.Web.UI.Page
         ToggleTab(1);
     }
 
-    protected void btnSearch_Click(object sender, EventArgs e)
-    {
-        SearchUser();
-    }
+   
 
     protected void ddlPackage_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -197,7 +194,7 @@ public partial class User_Activation : System.Web.UI.Page
         lblAmount.ForeColor = System.Drawing.Color.Red;
     }
 
-    protected void btnActivate_Click(object sender, EventArgs e)
+   /* protected void btnActivate_Click(object sender, EventArgs e)
     {
         string Id = Request.Cookies["TVUSCK"]["xvhuqdph"].ToString();
         string selectedPackage = ddlPackage.SelectedItem.ToString();
@@ -392,5 +389,5 @@ public partial class User_Activation : System.Web.UI.Page
         }
         else
             Alert("Please select a valid package.");
-    }
+    }/*/
 }

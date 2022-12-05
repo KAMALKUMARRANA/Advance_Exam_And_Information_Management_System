@@ -43,19 +43,7 @@
                         <asp:Label ID="lblInfo" runat="server" Text="name (id)"></asp:Label>
                     </div>
                     <div id="content">
-                        <div id="holi">
-                            <div>
-                                <h1>HAPPY HOLI</h1>
-                            </div>
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
+                       
                         <div id="update" class="window" runat="server">
                             <p>New Update</p>
                         </div>
@@ -70,49 +58,49 @@
                                 <p>Account Status</p>
                                 <div class="content">
                                     <i class="fas fa-user"></i>
-                                    <asp:Label ID="lblStatus" runat="server" Text="Inactive"></asp:Label>
+                                    <asp:Label ID="lblStatus" runat="server" Text="Active"></asp:Label>
                                 </div>
                             </div>
                             <div class="tab">
-                                <p>Boost</p>
+                                <p>Apear in Exam</p>
                                 <div class="content">
                                     <i class="fas fa-tachometer-alt"></i>
-                                    <asp:Label ID="lblBoost" runat="server" Text="No"></asp:Label>
+                                    <asp:Label ID="lblBoost" runat="server" Text="Yes"></asp:Label>
                                 </div>
                             </div>
                             <div class="tab">
-                                <p>Balance</p>
+                                <p>Previous Exam</p>
                                 <div class="content">
-                                    <i class="fas fa-rupee-sign"></i>
-                                    <asp:Label ID="lblBalance" runat="server" Text="0"></asp:Label>
+                                    
+                                    <asp:Label ID="lblBalance" runat="server" Text="3"></asp:Label>
                                 </div>
                             </div>
                             <div class="tab">
-                                <p>Fund</p>
+                                <p>Latest Exam Marks</p>
                                 <div class="content">
-                                    <i class="fas fa-coins"></i>
-                                    <asp:Label ID="lblFund" runat="server" Text="0"></asp:Label>
+                                    
+                                    <asp:Label ID="lblFund" runat="server" Text="90"></asp:Label>
                                 </div>
                             </div>
                             <div id="DaiyIncomeTab" class="tab" runat="server">
-                                <p>Daily Income</p>
+                                <p>Daily Task</p>
                                 <div class="content">
-                                    <i class="fas fa-rupee-sign"></i>
-                                    <asp:Label ID="lblIncome" runat="server" Text="0"></asp:Label>
+                                    
+                                    <asp:Label ID="lblIncome" runat="server" Text="2"></asp:Label>
                                 </div>
                             </div>
                             <div class="tab">
-                                <p>My Team</p>
+                                <p>Class Details</p>
                                 <div class="content">
                                     <i class="fas fa-users"></i>
-                                    <asp:Label ID="lblTeam" runat="server" Text="0"></asp:Label>
+                                    <asp:Label ID="lblTeam" runat="server" Text="BCA-5th Sem"></asp:Label>
                                 </div>
                             </div>
                             <div class="tab">
-                                <p>Validity</p>
+                                <p>College</p>
                                 <div class="content">
-                                    <i class="far fa-clock"></i>
-                                    <asp:Label ID="lblValidity" runat="server" Text="0"></asp:Label>
+                                    
+                                    <asp:Label ID="lblValidity" runat="server" Text="Midnapore College"></asp:Label>
                                 </div>
                             </div>
                         </div>

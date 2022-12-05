@@ -37,25 +37,25 @@ public partial class User_Account : System.Web.UI.Page
         if (dtUser.Rows[0]["RefId"].ToString().Trim() != "LEADER")
         {
             DataTable refUser = GlobalClass.LoadUser(dtUser.Rows[0]["RefId"].ToString().Trim());
-            tagReferrerId.InnerText = refUser.Rows[0]["UserId"].ToString().Trim();
-            lblReferrerName.Text = refUser.Rows[0]["Name"].ToString().Trim();
+            //tagReferrerId.InnerText = refUser.Rows[0]["UserId"].ToString().Trim();
+           // lblReferrerName.Text = refUser.Rows[0]["Name"].ToString().Trim();
         }
         else
         {
             tagReferrerId.Visible = false;
-            lblReferrerName.Text = "You are a Leader.";
+            lblReferrerName.Text = "You are a active candidate.";
             linkContact.Visible = false;
         }
         if (dtUser.Rows[0]["Status"].ToString().Trim() == "Active")
         {
-            if (dtUser.Rows[0]["Package"].ToString().Trim() != "")
+            /*if (dtUser.Rows[0]["Package"].ToString().Trim() != "")
             {
                 lblPackage.Text = dtUser.Rows[0]["Package"].ToString();
             }
             if (GlobalClass.CheckBoost(userId))
             {
                 lblBoost.Text = "Boosted";
-            }
+            }*/
             listStatus.Attributes.Add("class", listStatus.Attributes["class"] + " active");
             tagStatus.Attributes.Add("class", tagStatus.Attributes["class"] + " active");
             tagStatus.InnerText = "Active";
@@ -89,23 +89,7 @@ public partial class User_Account : System.Web.UI.Page
             tagKyc.InnerText = "Verified";
             linkKyc.Visible = false;
         }
-        if (dtUserInfo.Rows[0]["Address"].ToString().Trim() != "")
-        {
-            lblAddress.InnerText = dtUserInfo.Rows[0]["Address"].ToString().Trim();
-            linkAddress.Visible = false;
-        }
-        if (dtUserInfo.Rows[0]["Account"].ToString().Trim() != "")
-        {
-            lblAccountNumber.InnerText = dtUserInfo.Rows[0]["Account"].ToString().Trim();
-            lblIfscCode.InnerText = dtUserInfo.Rows[0]["IFSC"].ToString().Trim();
-            lblBankName.InnerText = dtUserInfo.Rows[0]["Bank"].ToString().Trim();
-            linkBank.Visible = false;
-        }
-        else
-        {
-            linkBank.Visible = true;
-            linkBank.Text = "Provide Bank Details";
-        }
+      
     }
 
     protected void Page_Load(object sender, EventArgs e)
@@ -262,60 +246,9 @@ public partial class User_Account : System.Web.UI.Page
         Response.Redirect("Help.aspx");
     }
 
-    protected void linkEmail_Click(object sender, EventArgs e)
-    {
-        /*if (linkEmail.Text == "Verify")
-        {
-            HttpCookie userCookies = Request.Cookies["userInfo"];
-            string userId = userCookies["UserId"].ToString();
-            DataTable dtUser = GlobalClass.LoadUser(userId);
-            string otp = GlobalClass.GenerateOTP();
-            Session["OTP"] = otp;
-            string email = dtUser.Rows[0]["Email"].ToString().Trim();
-            string subject = "OTP Verification";
-            string message = "One time password (OTP) for email verification for User Id " + userId + ", is " + otp + ". And it is valid for next 5 minutes.";
+ 
 
-            string response = GlobalClass.SendEmail(email, subject, message);
-            if (response == null)
-            {
-                verifyPanel.Visible = true;
-                lblMessage.Text = "Email - " + email;
-                btnVerify.Text = "Verify Email";
-            }
-            else
-                Alert(response);
-        }
-        else
-            Alert("Please contact Admin.");*/
-        Alert(GlobalClass.CustomError);
-    }
-
-    protected void linkMobile_Click(object sender, EventArgs e)
-    {
-        /*if (linkMobile.Text == "Verify")
-        {
-            HttpCookie userCookies = Request.Cookies["userInfo"];
-            string userId = userCookies["UserId"].ToString();
-            DataTable dtUser = GlobalClass.LoadUser(userId);
-            string otp = GlobalClass.GenerateOTP();
-            Session["OTP"] = otp;
-            string number = dtUser.Rows[0]["Mobile"].ToString().Trim();
-            string message = "One Time Password (OTP) for mobile verification for User Id " + userId + " is " + otp + ". And it is valid for next 5 minutes.";
-
-            string response = GlobalClass.SendMessage(number, message);
-            if (response == null)
-            {
-                verifyPanel.Visible = true;
-                lblMessage.Text = "Mobile - " + number;
-                btnVerify.Text = "Verify Mobile";
-            }
-            else
-                Alert(response);
-        }
-        else
-            Alert("Please contact Admin.");*/
-        Alert(GlobalClass.CustomError);
-    }
+  
 
     protected void linkKyc_Click(object sender, EventArgs e)
     {
