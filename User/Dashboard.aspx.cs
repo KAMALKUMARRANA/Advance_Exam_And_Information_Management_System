@@ -26,30 +26,10 @@ public partial class User_Dashboard : System.Web.UI.Page
     }
     private void ShowUserInfo(string userId)
     {
-        DataTable dtUser = GlobalClass.LoadUser(userId);
-        string name = dtUser.Rows[0]["Name"].ToString().Trim();
-        string id = dtUser.Rows[0]["UserId"].ToString().Trim();
+        DataTable dt = GlobalClass.LoadUser(userId);
+        string name = dt.Rows[0]["Name"].ToString().Trim();
+        string id = dt.Rows[0]["UserId"].ToString().Trim();
         lblInfo.Text = name + " - " + id;
-        lblStatus.Text = dtUser.Rows[0]["Status"].ToString().Trim();
-        //lblBalance.Text = GlobalClass.LoadUserBalance(userId).ToString();
-        //lblFund.Text = GlobalClass.LoadUserFund(userId).ToString();
-        int team = GlobalClass.CountActiveTeam(userId);
-        if (team > 0)
-            lblBoost.Text = "Yes";
-        else
-            lblBoost.Text = "No";
-        lblTeam.Text = team.ToString();
-        if (dtUser.Rows[0]["RefId"].ToString().Trim() != "LEADER")
-        {
-            if (dtUser.Rows[0]["Status"].ToString().Trim() == "Active")
-            {
-                task.Visible = true;
-                //lblIncome.Text = GlobalClass.DailyIncome(userId).ToString();
-            }
-        }
-        else
-            DaiyIncomeTab.Visible = false;
-        lblValidity.Text = GlobalClass.CheckUserValidity(userId);
     }
     private void ShowUpdate()
     {

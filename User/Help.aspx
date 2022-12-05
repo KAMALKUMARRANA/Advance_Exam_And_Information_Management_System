@@ -44,14 +44,12 @@
                     </div>
                     <div id="content">
                         <div id="intro">
-                            <h>We are happy to help you</h>
+                            <h>Any Issue to Contact those Address</h>
                             <ul>
-                                <li>Please keep patience while we are solving your issues.</li>
-                                <li>Generally we response within 72 hours after contacting.</li>
-                                <li>For instant help and solution please contact your referrer.</li>
-                                <li>You may also check the <a href="#">Privacy Policy</a> or <a href="#">Terms & Condition</a>
-                                    or <a href="#">FAQ</a> page for more information.</li>
-                            </ul>
+                            <li>helpdesk@gmail.com</li>
+                            <li>ExamOnline304@gmail.com</li>
+                                
+                                </ul>
                         </div>
                         <div class="dataPanel" id="referrerInfo" runat="server">
                             <h>Your Referrer contact details</h>
@@ -115,9 +113,7 @@
                                     <asp:ListItem Value="Select Subject" disabled Selected hidden>Select Subject</asp:ListItem>
                                     <asp:ListItem>Account related</asp:ListItem>
                                     <asp:ListItem>Activation related</asp:ListItem>
-                                    <asp:ListItem>Recharge related</asp:ListItem>
-                                    <asp:ListItem>Withdrawal related</asp:ListItem>
-                                    <asp:ListItem>Refer related</asp:ListItem>
+                                    <asp:ListItem>Exam Related</asp:ListItem>
                                     <asp:ListItem>Others</asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="ddlSubject" class="label-name">

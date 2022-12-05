@@ -20,10 +20,11 @@
             <div id="menu">
                 <ul>
                     <li><a class="a" href="Default.aspx"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a class="a" href="Public/About.aspx"><i class="fas fa-info-circle"></i>Dashboard</a></li>
-                    
+                    <li><a class="a" href="User/Login.aspx"><i class="fas fa-info-circle"></i>Dashboard</a></li>
                     <li><a class="btnLogin" href="#"><i class="fas fa-user-plus"></i>HOD Login</a></li>
                     <li><a class="btnLogin" href="User/Login.aspx"><i class="fas fa-sign-in-alt"></i>Candidate Login</a></li>
+                    <li><a class="btnLogin" href="Admin/Login.aspx"><i class="fas fa-user-plus"></i>Admin Login</a></li>
+                   
                 </ul>
             </div>
         </div>
@@ -48,7 +49,7 @@
                 <div class="contact">
                     <div class="mobile">
                         <i class="fas fa-phone"></i>
-                        <asp:Label ID="mobile" runat="server">0322282530</asp:Label>
+                        <asp:Label ID="mobile" runat="server">7047891894</asp:Label>
                     </div>
                     <div class="email">
                         <i class="far fa-envelope"></i>
@@ -77,8 +78,7 @@
           
           <center>
             <div class="copyright">
-                © Copyright <span id="year" runat="server">2022</span> <span id="cName" runat="server">Exam Management &amp; Application</span> Pvt. Ltd.
-                <br />
+                © Copyright <span id="year" runat="server">2022</span> <span id="cName" runat="server">Exam Management &amp; Application</span> 
                 All Rights Reserved.
             </div>
             </center>

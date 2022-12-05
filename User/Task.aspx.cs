@@ -30,13 +30,7 @@ public partial class User_Task : System.Web.UI.Page
         var script = string.Format("alert({0});window.location.replace('Dashboard.aspx');", m);
         ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
     }
-    private void ShowUserInfo(string userId)
-    {
-        DataTable dtUserInfo = GlobalClass.LoadUser(userId);
-        string name = dtUserInfo.Rows[0]["Name"].ToString().Trim();
-        string id = dtUserInfo.Rows[0]["UserId"].ToString().Trim();
-        lblInfo.Text = name + " - " + id;
-    }
+ 
   
 
     protected void Page_Load(object sender, EventArgs e)
@@ -51,7 +45,7 @@ public partial class User_Task : System.Web.UI.Page
                 if (userCookies["xvhuqdph"] != null && userCookies["qbttxpse"] != null)
                 {
                     string userId = userCookies["xvhuqdph"].ToString();
-                    ShowUserInfo(userId);
+                   // ShowUserInfo(userId);
                     
                 }
                 else

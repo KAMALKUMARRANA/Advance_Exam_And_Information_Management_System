@@ -23,13 +23,7 @@ public partial class User_Feedback : System.Web.UI.Page
         var script = string.Format("alert({0});window.location.replace(window.location.href);", m);
         ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", script, true);
     }
-    private void ShowUserInfo(string userId)
-    {
-        DataTable dt = GlobalClass.LoadUser(userId);
-        string name = dt.Rows[0]["Name"].ToString().Trim();
-        string id = dt.Rows[0]["UserId"].ToString().Trim();
-        lblInfo.Text = name + " - " + id;
-    }
+
     private string GenerateFeedbackId()
     {
         const String alpha = "0123456789";
@@ -69,7 +63,7 @@ public partial class User_Feedback : System.Web.UI.Page
                 if (userCookies["xvhuqdph"] != null && userCookies["qbttxpse"] != null)
                 {
                     string userId = userCookies["xvhuqdph"].ToString();
-                    ShowUserInfo(userId);
+                   
                 }
                 else
                     Response.Redirect("Login.aspx?Mode=Redirect&Url=" + Request.Url.AbsoluteUri);

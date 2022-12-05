@@ -29,7 +29,7 @@
         <asp:UpdatePanel ID="updatePage" runat="server">
             <ContentTemplate>
                 <div id="header">
-                    <div id="logo"><span>Touch &amp; View</span></div>
+                    <div id="logo"><span>Advance Exam Management System</span></div>
                 </div>
                 <div id="body">
                     <div class="status">

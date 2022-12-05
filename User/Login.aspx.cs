@@ -74,7 +74,7 @@ public partial class User_Login : System.Web.UI.Page
 
     protected void linkRegister_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Registration.aspx");
+        Response.Redirect("Register.aspx");
     }
 
     protected void linkForgotPassword_Click(object sender, EventArgs e)

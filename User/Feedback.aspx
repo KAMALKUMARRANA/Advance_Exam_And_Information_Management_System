@@ -40,15 +40,14 @@
                     <div class="status">
                         <i class="fas fa-angle-double-right"></i>
                         <asp:Label ID="status" runat="server" Text="Feedback"></asp:Label>
-                        <asp:Label ID="lblInfo" runat="server" Text="name (id)"></asp:Label>
+                        <asp:Label ID="lblInfo" runat="server" Text="Welcome User"></asp:Label>
                     </div>
                     <div id="content">
                         <div id="intro">
                             <h>Your valueable feedback is importmant to us.</h>
                             <ul>
                                 <li>Please give your valueable feedback regularly to improve our services.</li>
-                                <li>Freely share your idea with us.</li>
-                                <li>Mention your contact details for further procedure.</li>
+                                
                             </ul>
                         </div>
                         <div id="form">
@@ -56,7 +55,7 @@
                                 <asp:DropDownList ID="ddlCategory" class="input" runat="server" required>
                                     <asp:ListItem Value="Select category" disabled Selected hidden>Select category</asp:ListItem>
                                     <asp:ListItem>Development</asp:ListItem>
-                                    <asp:ListItem>Advertise</asp:ListItem>
+                                    <asp:ListItem>Interface Access</asp:ListItem>
                                     <asp:ListItem>Others</asp:ListItem>
                                 </asp:DropDownList>
                                 <label for="name" class="label-name">

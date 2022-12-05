@@ -69,21 +69,5 @@ public partial class Admin_Dashboard : System.Web.UI.Page
         }
     }
 
-    protected void btnLocal_Click(object sender, EventArgs e)
-    {
-        string today = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
-        lblLocal.Text = today;
-    }
-
-    protected void btnServer_Click(object sender, EventArgs e)
-    {
-        string today = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("India Standard Time")).ToString("dd-MM-yyyy HH:mm:ss");
-        lblServer.Text = today;
-    }
-
-    protected void btnDay_Click(object sender, EventArgs e)
-    {
-        string today = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("India Standard Time")).ToString("dddd");
-        lblDay.Text = today;
-    }
+   
 }

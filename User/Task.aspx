@@ -40,7 +40,7 @@
                     <div class="status">
                         <i class="fas fa-angle-double-right"></i>
                         <asp:Label ID="status" runat="server" Text="Daily Task"></asp:Label>
-                        <asp:Label ID="lblInfo" runat="server" Text="name (id)"></asp:Label>
+                        <asp:Label ID="lblInfo" runat="server" Text="Welcome User"></asp:Label>
                     </div>
                     <div id="content">
                         <div id="progress" runat="server">

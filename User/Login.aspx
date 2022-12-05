@@ -52,6 +52,7 @@
                     </div>
                     <asp:Button ID="btnLogin" CssClass="login-btn" runat="server" Text="LOGIN" OnClientClick="check()" OnClick="btnLogin_Click" />
                     <div class="row">
+                        
                         <asp:LinkButton ID="linkRegister" CssClass="link" runat="server" OnClick="linkRegister_Click">Register Now</asp:LinkButton>
                         <asp:LinkButton ID="linkForgotPassword" CssClass="link" runat="server" OnClick="linkForgotPassword_Click">Forgot Password?</asp:LinkButton>
                     </div>

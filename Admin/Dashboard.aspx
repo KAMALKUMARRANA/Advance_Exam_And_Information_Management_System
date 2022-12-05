@@ -81,18 +81,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="date">
-                            <asp:Button ID="btnLocal" runat="server" Text="Get Local Time" OnClick="btnLocal_Click"/>
-                            <asp:Label ID="lblLocal" runat="server" Text="Local Server Time."></asp:Label>
-                            <br />
-                            <br />
-                            <asp:Button ID="btnServer" runat="server" Text="Get Live Time" OnClick="btnServer_Click"/>
-                            <asp:Label ID="lblServer" runat="server" Text="Live Server Time."></asp:Label>
-                            <br />
-                            <br />
-                            <asp:Button ID="btnDay" runat="server" Text="Get Live Day" OnClick="btnDay_Click"/>
-                            <asp:Label ID="lblDay" runat="server" Text="Live Server Day."></asp:Label>
-                        </div>
+                        
                     </div>
                 </div>
             </ContentTemplate>
