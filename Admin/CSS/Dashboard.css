@@ -1,0 +1,110 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#body {
+    width: 100%;
+    padding: 5px 50px;
+}
+
+#body .status {
+    width: 100%;
+    padding: 5px 5px;
+    background: #ccc;
+    position: relative;
+    font-size: 15px;
+}
+
+#body .status.top {
+    padding-bottom: 0;
+}
+
+#body .status.bottom {
+    padding-top: 2px;
+}
+
+#body .status i {
+    width: 22px;
+}
+
+#body .status .info {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+
+#body .status .lbl {
+    font-family: HP Simplified;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    margin: 5px auto 30px;
+    padding: 4px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+}
+
+#info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#info .tab p {
+    font-size: 15px;
+}
+
+#info .tab {
+    width: 140px;
+    height: 80px;
+    margin: 15px 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+#info .tab .content {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#info .tab .content i {
+    margin-right: 8px;
+}
+
+.date {
+    width: 100%;
+    padding: 5%;
+}
+
+#btnLocal,
+#btnServer,
+#btnDay {
+    padding: 2px 4px;
+    font-size: 14px;
+}
+
+#lblLocal,
+#lblServer,
+#btnDay {
+    font-size: 14px;
+}

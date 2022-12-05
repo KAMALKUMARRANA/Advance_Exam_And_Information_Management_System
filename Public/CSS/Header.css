@@ -1,0 +1,120 @@
+﻿#logo {
+    width: 100%;
+    background-image: linear-gradient(#097FBD, #00A3F8);
+    color: white;
+    padding: 8px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 6px;
+    User-select: none;
+}
+
+#header {
+    min-height: 70px;
+    background: grey;
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    User-select: none;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    float: left;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul li {
+    list-style: none;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+#menu ul li .a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 5px 8px 5px 8px;
+    font-size: 18px;
+    font-family: Sans-Serif;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+#menu ul li .active {
+    background: #ff497c;
+}
+
+#menu ul li .btnLogin {
+    display: block;
+    text-decoration: none;
+    padding: 5px 8px 5px 8px;
+    font-size: 18px;
+    font-family: Sans-Serif;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    box-shadow: 0 0 2px 2px #fff;
+}
+
+#menu ul li a i {
+    margin-right: 5px;
+}
+
+#menu ul:hover li a {
+    trasnsform: scale(1.5);
+    opacity: .2;
+    filter: blur(.2px);
+}
+
+#menu ul:hover li .btnLogin {
+    box-shadow: none;
+}
+
+#menu ul li a:hover {
+    trasnsform: scale(1.5);
+    opacity: 1;
+    filter: blur(1);
+}
+
+#menu ul li .btnLogin:hover {
+    color: #fff;
+    background: #2196f3;
+    box-shadow: 0 0 5px 2px #2196f3;
+}
+
+#menu ul li .a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff497c;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+}
+
+#menu ul li .a:hover:before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}

@@ -1,0 +1,36 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+}
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    position: relative;
+}
+
+.maincontent
+{
+    width: 100%;
+    min-height: 500px;
+    padding: 70px;
+    color: #000;
+    font-family: Arial;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/*-------------Mobile-------------*/
+
+@media (max-width: 600px)
+{
+    .maincontent
+    {
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,25 @@
+﻿/*-------------Mobile-------------*/
+
+@media (max-width: 600px)
+{
+    #body
+    {
+        padding: 5px 10px;
+    }
+
+    #content
+    {
+        margin: 5px auto;
+        min-height: 570px;
+    }
+}
+
+/*-------------Less Than Mobile-------------*/
+
+@media (max-width: 359px)
+{
+    body
+    {
+        width: 360px;
+    }
+}

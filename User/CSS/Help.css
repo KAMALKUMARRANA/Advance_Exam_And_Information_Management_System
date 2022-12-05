@@ -1,0 +1,272 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    user-select: none;
+}
+
+#body {
+    width: 100%;
+    padding: 5px 50px;
+}
+
+#body .status {
+    width: 100%;
+    padding: 5px 5px;
+    background: #ccc;
+    position: relative;
+}
+
+#lblInfo {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    margin: 5px auto 30px;
+    padding: 4px 5px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+}
+
+#intro,
+.dataPanel {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #eee;
+    border: 1px dashed #555;
+    border-radius: 4px;
+}
+
+#intro h {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#intro ul {
+    margin: 10px 0 10px 15px;
+}
+
+#intro ul li {
+    font-size: 15px;
+    margin: 12px 0;
+}
+
+.dataPanel h {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.dataPanel .row {
+    display: flex;
+    margin: 10px 0;
+}
+
+.dataPanel .row div:nth-child(1) {
+    font-size: 15px;
+    width: 140px;
+    color: #444;
+}
+
+.dataPanel .row div:nth-child(2) {
+    font-size: 15px;
+    width: 20px;
+    color: #444;
+    font-weight: 600;
+}
+
+.dataPanel .row span {
+    font-size: 15px;
+    color: #000;
+    user-select: text;
+}
+
+.input-box {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+}
+
+textarea {
+    resize: none;
+}
+
+.input.focus {
+    border: 2px solid #1A73E8;
+}
+
+.input-box .input {
+    width: 100%;
+    height: 55px;
+    padding: 13px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.input-box .label-name .content-name {
+    position: absolute;
+    bottom: 18px;
+    left: 16px;
+    color: #595f6e;
+    transition: all .2s ease;
+}
+
+.input-box .input:focus+.label-name .content-name {
+    transform: translateX(-5px) translateY(-28px);
+    font-size: 14px;
+    color: #1A73E8;
+    background-color: #fff;
+    padding: 0px 3px 0px 3px;
+}
+
+.input-box .input:valid+.label-name .content-name {
+    transform: translateX(-3px) translateY(-30px);
+    font-size: 14px;
+    color: #1A73E8;
+    background-color: #fff;
+    padding: 0px 3px 0px 3px;
+    transition: all 0s ease;
+}
+
+.input-box .input:focus:valid+.label-name .content-name {
+    transform: translateX(-5px) translateY(-28px);
+}
+
+.input-box .input:focus+.label-name {
+    border: 2px solid #1A73E8;
+    border-radius: 4px;
+}
+
+#txtMessage {
+    height: auto;
+    border: 2px solid #ccc;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.label .content {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    color: #595f6e;
+    transition: all .2s ease;
+}
+
+#txtMessage:focus {
+    border: 2px solid #1A73E8;
+}
+
+#txtMessage:valid+.label .content {
+    transform: translateX(-5px) translateY(-24px);
+    font-size: 14px;
+    color: #1A73E8;
+    background-color: #fff;
+    padding: 0px 3px 0px 3px;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btnContainer .btn {
+    padding: 10px 30px;
+    font-family: Sans-Serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #1A73E8;
+    color: #ccc;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/*-------------Mobile-------------*/
+
+@media (max-width: 600px) {
+    #intro {
+        width: 100%;
+        margin: 0 auto 10px;
+        padding: 10px 15px 0;
+    }
+    #intro h {
+        font-size: 18px;
+    }
+    #intro ul {
+        margin: 10px 0 0 15px;
+    }
+    #intro ul li {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+    .dataPanel {
+        width: 95%;
+        font-size: 14px;
+    }
+    .dataPanel h {
+        font-size: 18px;
+    }
+    .dataPanel .row {
+        margin: 8px 0;
+    }
+    .dataPanel .row div:nth-child(1) {
+        font-size: 15px;
+        width: 70px;
+    }
+    .input-box {
+        width: 95%;
+    }
+    .btnContainer {
+        margin-top: 10px;
+    }
+    .btnContainer .btn {
+        font-size: 16px;
+        padding: 10px 15px;
+        text-transform: capitalize;
+    }
+}

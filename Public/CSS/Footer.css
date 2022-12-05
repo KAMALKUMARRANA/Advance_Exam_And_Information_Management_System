@@ -1,0 +1,282 @@
+﻿#footer {
+    position: relative;
+    float: left;
+    bottom: 0;
+    width: 100%;
+    min-height: 500px;
+    background-color:#12b448;
+    color: #fff;
+    User-select: none;
+}
+
+#footer .info {
+    width: 40%;
+    height: 330px;
+    float: left;
+    text-align: justify;
+    padding: 20px 20px 20px 50px;
+    position: relative;
+}
+
+#footer .info .banner {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#footer .info p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#footer .contact {
+    position: absolute;
+    width: 100% auto;
+    bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+    User-select: text;
+}
+
+#footer .contact .mobile {
+    margin-bottom: 15px;
+}
+
+#footer .contact i {
+    margin-right: 8px;
+}
+
+#footer .links {
+    float: left;
+    width: 30%;
+    height: 330px;
+    padding: 20px;
+}
+
+#footer .links .a {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+#footer .links a {
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+#footer .links i {
+    margin-right: 8px;
+}
+
+#footer .links a:hover {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#footer .association {
+    width: 30%;
+    height: 330px;
+    float: left;
+    padding: 20px;
+    z-index: -1;
+}
+
+#footer .association p,
+#footer .links p {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+#footer .association .banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    user-select: none;
+}
+
+#footer .association .banner .logo {
+    width: 130px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#footer .security,
+#footer .payment {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#footer .security {
+    padding-left: 50px;
+}
+
+#footer .security .row,
+#footer .payment .row {
+    display: flex;
+}
+
+#footer .payment {
+    padding-right: 50px;
+}
+
+#footer .security .p,
+#footer .payment .p {
+    width: 100%;
+}
+
+#footer .security p,
+#footer .payment p {
+    font-family: Arial;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+#footer .security .logos,
+#footer .payment .logos {
+    display: flex;
+}
+
+#footer .security .logos .logo,
+#footer .payment .logos .logo {
+    width: 100px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+
+/*Social Media Buton With Hover Effect*/
+
+#footer .social {
+    float: left;
+    width: 100%;
+    padding: 12px 50px;
+    background-color: #fff;
+    box-shadow: inset 0px 11px 15px -8px #5a5a5a, inset 0px -11px 15px -8px #5a5a5a;
+}
+
+#footer .social .container {
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    position: relative;
+}
+
+#footer .social .container .icon {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer .social .container .icon .btn {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#footer .social .container .icon .text {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 7px;
+    font-family: Sans-Serif;
+    opacity: 1;
+    z-index: 1;
+    transition: margin-top .4s, opacity .4s, z-index .4s;
+}
+
+#footer .social .container .icon .btn i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+#footer .social .container .icon .btn:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+#footer .social .container .icon .btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+#footer .social .container .icon .btn:hover::before {
+    animation: ani 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes ani {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+.fb,
+.fb .btn {
+    color: #4867aa;
+}
+
+.twitter,
+.twitter .btn {
+    color: #1da1f2;
+}
+
+.insta,
+.insta .btn {
+    color: #e1306c;
+}
+
+.yt,
+.yt .btn {
+    color: #ff0000;
+}
+
+#footer .copyright {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 50px;
+    line-height: 2;
+}

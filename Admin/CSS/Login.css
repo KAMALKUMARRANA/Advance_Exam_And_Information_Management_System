@@ -1,0 +1,256 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+}
+
+#logo {
+    min-height: 80px;
+    width: 100%;
+    background-color:green;
+    color: #fff;
+    padding: 8px 50px;
+    font-size: 40px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.login-panel {
+    width: 500px;
+    margin: 21px auto;
+    padding: 50px 0;
+    color: #000;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .4);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 25px;
+    font-family: Georgia;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.input-box {
+    margin: 31px auto 50px;
+    width: 80%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.input-box .input {
+    width: 100%;
+    height: 55px;
+    padding: 13px 15px 13px 50px;
+    font-size: 16px;
+    color: #333;
+    background-color: Transparent;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.input-box .input.password {
+    padding-right: 50px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.input-box .label-name .content-name {
+    position: absolute;
+    bottom: 18px;
+    left: 51px;
+    font-size: 16px;
+    color: #747476;
+    transition: all .2s ease;
+}
+
+.input-box .label-name .icon {
+    position: absolute;
+    left: 1px;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1px solid #ccc;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.input-box .label-name .icon i {
+    font-size: 20px;
+    color: #bbb;
+}
+
+.input-box .input:focus+.label-name .content-name {
+    transform: translateX(-5px) translateY(-28px);
+    font-size: 14px;
+    color: #1A73E8;
+    background: #fff;
+    padding: 0px 3px 0px 3px;
+}
+
+.input-box .input:valid+.label-name .content-name {
+    transform: translateX(-3px) translateY(-30px);
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+    padding: 0px 3px 0px 3px;
+    transition: all 0s ease;
+}
+
+.input-box .input:focus:valid+.label-name .content-name {
+    transform: translateX(-5px) translateY(-28px);
+    color: #1A73E8;
+}
+
+.input-box .input:focus+.label-name {
+    border: 2px solid #1A73E8;
+    border-radius: 4px;
+}
+
+.input-box .input:focus+.label-name .icon {
+    left: -1px;
+}
+
+.input-box .input:focus+.label-name .icon i {
+    color: #1A73E8;
+}
+
+.input-box .label-name .eye {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.input-box .label-name .eye i {
+    font-size: 20px;
+    color: #bbb;
+}
+
+.input-box .label-name .eye :hover {
+    color: #000;
+}
+
+.input-box .label-name .eye #show {
+    display: none;
+}
+
+.input-box .input:focus+.label-name .eye {
+    right: -1px;
+}
+
+.login-btn
+{
+    margin: 60px auto 20px;
+    padding: 10px 40px;
+    width: 80%;
+    display: block;
+    outline: none;
+    padding: 10px 0;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 1px #760000;
+    cursor: pointer;
+    background:green;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    transition: all ease .5s;
+}
+
+.row {
+    margin: 40px auto 0;
+    width: 80%;
+    position: relative;
+}
+
+.row .link {
+    cursor: pointer;
+    color: #ooo;
+    font-size: 16px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+}
+
+.row .link:hover {
+    text-decoration: underline;
+}
+
+
+/*-------------Mobile-------------*/
+
+@media (max-width: 600px) {
+    #logo {
+        width: 100%;
+        padding: 8px 0;
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    .login-panel {
+        width: 90%;
+        margin: 20px auto;
+        margin-top: 25%;
+        padding: 20px 0 50px;
+    }
+    h1 {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+    .input-box {
+        margin: 0 auto 40px;
+        width: 80%;
+    }
+    .input-box .input {
+        padding: 13px 15px 13px 43px;
+    }
+    .input-box .input.password {
+        padding-right: 41px;
+    }
+    .input-box .label-name .content-name {
+        left: 44px;
+    }
+    .input-box .label-name .icon {
+        padding: 8px;
+    }
+    .input-box .label-name .icon i {
+        font-size: 18px;
+    }
+    .input-box .label-name .eye {
+        padding: 8px;
+    }
+    .btnContainer {
+        margin: 40px auto 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 359px) {
+    body {
+        width: 360px;
+    }
+}

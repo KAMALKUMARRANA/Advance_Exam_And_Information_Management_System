@@ -1,0 +1,340 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    user-select: none;
+}
+
+#body {
+    width: 100%;
+    padding: 5px 50px;
+}
+
+#body .status {
+    width: 100%;
+    padding: 5px 5px;
+    background: #ccc;
+    position: relative;
+    font-size: 15px;
+}
+
+#body .status.top {
+    padding-bottom: 0;
+}
+
+#body .status.bottom {
+    padding-top: 2px;
+}
+
+#body .status i {
+    width: 22px;
+}
+
+#body .status .info {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+
+#body .status .lbl {
+    font-family: HP Simplified;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    margin: 5px auto 30px;
+    padding: 4px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+}
+
+.intro {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #eee;
+    border: 1px dashed #555;
+    border-radius: 4px;
+}
+
+.intro ul {
+    margin: 10px 0 10px 15px;
+}
+
+.intro ul li {
+    font-size: 15px;
+    margin: 12px 0;
+}
+
+.input-box {
+    margin: 10px auto;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.input-box.ddl {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input-box .input {
+    width: 100%;
+    height: 55px;
+    padding: 13px 15px 13px 50px;
+    font-size: 16px;
+    color: #000;
+    background-color: Transparent;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    outline: 0;
+    padding-right: 100px;
+}
+
+.input-box .input.ddl {
+    padding-right: 15px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.input-box .label-name .content-name {
+    position: absolute;
+    bottom: 18px;
+    left: 51px;
+    font-size: 16px;
+    color: #aaa;
+    transition: all .2s ease;
+}
+
+.input-box .label-name .icon {
+    position: absolute;
+    left: 1px;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 1px solid #DADCE0;
+    pointer-events: auto;
+    cursor: default;
+}
+
+.input-box .label-name .icon i {
+    font-size: 20px;
+    color: #aaa;
+}
+
+.input-box .input:focus+.label-name .content-name {
+    transform: translateX(-5px) translateY(-28px);
+    font-size: 14px;
+    background-color: #fff;
+    color: #1A73E8;
+    padding: 0px 3px 0px 3px;
+}
+
+.input-box .input:valid+.label-name .content-name {
+    transform: translateX(-3px) translateY(-30px);
+    font-size: 14px;
+    background-color: #fff;
+    color: #999;
+    padding: 0px 3px 0px 3px;
+    transition: all 0s ease;
+}
+
+.input-box .input:focus:valid+.label-name .content-name {
+    transform: translateX(-5px) translateY(-28px);
+    color: #1A73E8;
+}
+
+.input-box .input:focus+.label-name {
+    border: 2px solid #1A73E8;
+    border-radius: 4px;
+}
+
+.input-box .input:focus+.label-name .icon {
+    left: -1px;
+}
+
+.input-box .input:focus+.label-name .icon i {
+    color: #1A73E8;
+}
+
+.input-box .label-name .btn {
+    position: absolute;
+    right: 0px;
+    font-size: 20px;
+    text-decoration: none;
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 16px 20px;
+    background-color: #aaa;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.input-box .label-name .btn i {
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+.input-box .label-name .btn:hover {
+    background-color: #1A7EEE;
+    text-decoration: underline;
+}
+
+.input-box .input:focus+.label-name .btn {
+    right: -2px;
+    top: -2px;
+    background-color: #1A73E8;
+    color: #fff;
+}
+
+.tabPanel {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto 15px;
+    margin-top: -1px;
+    padding: 15px 5px 20px;
+    border: 2px solid #82A916;
+    border-radius: 5px;
+}
+
+.infoPanel {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.infoPanel .row {
+    display: flex;
+    margin: 15px 0;
+}
+
+.infoPanel .row div:nth-child(1) {
+    width: 140px;
+    color: #444;
+}
+
+.infoPanel .row div:nth-child(2) {
+    width: 20px;
+    color: #444;
+    font-weight: 600;
+}
+
+.infoPanel .row .lbl {
+    color: #000;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btnContainer .btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-family: Sans-Serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #1A73E8;
+    color: #ccc;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+}
+
+.btnContainer .btn i {
+    margin-right: 5px;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/*-------------Mobile-------------*/
+
+@media (max-width: 600px) {
+    .intro {
+        width: 100%;
+        margin: 0 auto 10px;
+        padding: 10px 15px 0;
+    }
+    .intro ul {
+        margin: 0 0 0 15px;
+    }
+    .intro ul li {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+    .input-box {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .input-box.ddl {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .input-box .input {
+        width: 100%;
+        padding: 13px 15px 13px 43px;
+    }
+    .input-box .label-name .content-name {
+        left: 44px;
+    }
+    .input-box .label-name .icon {
+        padding: 8px;
+    }
+    .input-box .label-name .icon i {
+        font-size: 18px;
+    }
+    .input-box .label-name .btn {
+        font-size: 18px;
+        padding: 17px 13px;
+    }
+    .tabPanel {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 5px 20px;
+        border: 0px;
+    }
+    .infoPanel {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .infoPanel .row {
+        margin: 0 0 10px 0;
+    }
+    .infoPanel .row div:nth-child(1) {
+        width: 120px;
+    }
+    .btnContainer {
+        margin-top: 10px;
+    }
+    .btnContainer .btn {
+        padding: 10px 15px;
+        text-transform: capitalize;
+    }
+}

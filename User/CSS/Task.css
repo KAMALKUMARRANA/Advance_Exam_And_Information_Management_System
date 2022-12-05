@@ -1,0 +1,59 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sans-Serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    user-select: none;
+}
+
+#body {
+    width: 100%;
+    padding: 5px 50px;
+}
+
+#body .status {
+    width: 100%;
+    padding: 5px 5px;
+    background: #ccc;
+    position: relative;
+}
+
+#lblInfo {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    margin: 5px auto 30px;
+    padding: 4px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+}
+
+#progress {
+    width: 100%;
+    padding: 5px 5px;
+    font-size: 14px;
+}
+
+#progress .btn {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+    background-color: #760000;
+    color: #fff;
+    cursor: pointer;
+}

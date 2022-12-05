@@ -1,0 +1,5 @@
+﻿<link href="CSS/Header.css" rel="stylesheet" type="text/css" />
+<link href="CSS/Footer.css" rel="stylesheet" type="text/css" />
+<link href="CSS/Loader.css" rel="stylesheet" type="text/css" />
+<link href="CSS/Responsive.css" rel="stylesheet" type="text/css" />
+<link href="../Global/Fontawesome-free-6.0.0-beta2-web/css/all.css" rel="stylesheet" type="text/css" />
