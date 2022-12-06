@@ -10,6 +10,11 @@
     letter-spacing: 6px;
     User-select: none;
 }
+.#bg
+{
+    background-image:url("Images/olms.png");
+    width:120%;
+}
 
 #header {
     min-height: 70px;

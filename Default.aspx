@@ -30,12 +30,12 @@
         </div>
 
         <div class="maincontent">
-           
-            
-
-
+        <div class="bg">
         </div>
+            <img src="Images/olms.png" width="100%" />
+           </div>
 
+  
         <div id="footer">
             <div class="info">
                 <div id="companyname" class="banner" runat="server">Online Exam Management system</div>
@@ -69,14 +69,7 @@
                 <div class="a"><a href="#"><i class="fas fa-tasks"></i>Privacy Policy</a></div>
                 <div class="a"><a href="#"><i class="fas fa-tasks"></i>Terms and conditions</a></div>
             </div>
-
-     
-            
-
-            
-
-          
-          <center>
+             <center>
             <div class="copyright">
                 © Copyright <span id="year" runat="server">2022</span> <span id="cName" runat="server">Exam Management &amp; Application</span> 
                 All Rights Reserved.
